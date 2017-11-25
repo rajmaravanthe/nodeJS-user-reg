@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h3= title
+  form#form_add_student(name="registeruser", method="post", action="/registeruser")
+    span Name
+    span &nbsp;
+    input#input_name(type="name", placeholder="name", name="name")
+    br
+    br
+    span Email
+    span &nbsp;
+    input#input_street(type="email", placeholder="email", name="email")
+    br
+    br
+    span Password
+    span &nbsp;
+    input#input_city(type="password", placeholder="password", name="password")
+    br
+    br
+    button#submit_student(type="submit") submit

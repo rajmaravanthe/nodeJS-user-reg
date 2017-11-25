@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  p= user
+  form#form_add_user(name="adduser", method="post", action="/updateuser/#{user.name}")
+    span Name
+    span &nbsp;
+    input#input_name(type="text", value="#{user.name}", placeholder="name", name="name")
+    br
+    br
+    span Email
+    span &nbsp;
+    input#input_street(type="email", value="#{user.email}", placeholder="email", name="email")
+    br
+    br
+    span Password
+    span &nbsp;
+    input#input_city(type="password", value="#{user.password}", placeholder="password", name="password")
+    br
+    br
+    button#submit_user(type="submit") submit

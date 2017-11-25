@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h3.
+    Users
+  ul
+    each user, i in userlist
+      li#user_list_item
+        p(href='#') #{user.name} 
+            span
+                a(href="/delete/#{user.name}") Delete &nbsp;
+            span
+                a(href="/update/#{user.name}") Update
